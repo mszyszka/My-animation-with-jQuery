@@ -1,0 +1,20 @@
+
+header {
+    margin-bottom: 50px;
+}
+.point {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #000000;
+    
+}
+
+.point-box {
+    text-align: center;
+/*    margin-left: 30px;*/
+}
+
+.points-row {
+    margin: auto;
+}
