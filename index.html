@@ -67,7 +67,9 @@
             var divContent ="";
             
             for (i=0; i<=29; i++){
-                divContent = divContent + '<div class="point"></div>';
+                var point = "point" +i;
+                divContent = divContent + '<div class="point" id="'+point+'"></div>';
+                if((i+1)%5==0)divContent = divContent+ '<div style="clear:both"></div>';
             }
             
             document.getElementsByClassName("animationField")[0].innerHTML = divContent;
