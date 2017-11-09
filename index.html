@@ -8,54 +8,20 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i&amp;subset=latin-ext" rel="stylesheet">
     <link href="reset.css" type="text/css" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet"> </head>
-<!--    1. Stworzyć 10 rzędów po 5 kolum, w każdej kolumnie kropka. Całość ma być w wyśrodkowanym kontenerze.
+<!--        1. Stworzyć 10 rzędów po 5 kolum, w każdej kolumnie kropka. Całość ma być w wyśrodkowanym kontenerze.
             2.Nadać karzdej kropce id.
+            3. W każdej kropce stworzyć onclicka który zacznie zmieniać jej kolor
+                *funkcja musi znać id klikniętego diva
 -->
 
 <body onload="start()">
     <div class="container">
         <header>
-            <h1>This is my animation made with jQuery</h1>
+            <h1>This is my animation made with JavaScript</h1>
             <p>Click on one of the points.</p>
         </header>
         <section class="animationField">
-            <!--
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
             
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
--->
         </section>
     </div>
     <!--    This is the end of the HTML code-->
@@ -67,13 +33,18 @@
             var divContent ="";
             
             for (i=0; i<=29; i++){
-                var point = "point" +i;
-                divContent = divContent + '<div class="point" id="'+point+'"></div>';
+                var p = "p" +i;
+                var nr = "nr" +i;
+                divContent = divContent + '<div class="point" id="'+p+'" onclick="animate('+nr+')"></div>';
                 if((i+1)%5==0)divContent = divContent+ '<div style="clear:both"></div>';
             }
             
             document.getElementsByClassName("animationField")[0].innerHTML = divContent;
         }
+        
+//        function animate(nr) {
+//            alert(nr);
+//        }
     </script>
 </body>
 

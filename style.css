@@ -28,9 +28,25 @@ header p {
 }
 .point {
 /*    I dont ned to have width and height becouse i set up padding*/
-    padding: 35px;
+    padding: 25px;
     border-radius: 100%;
     background: #000000;
     display: inline-block;
     margin-right: 2px;
+}
+
+@media(min-width: 400px){
+    .point {
+        padding: 35px;
+    }
+}
+@media(min-width: 670px){
+    .point {
+        padding: 40px;
+    }
+    header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
 }
