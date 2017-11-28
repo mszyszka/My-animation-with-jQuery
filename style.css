@@ -33,11 +33,13 @@ header p {
     background: #000000;
     display: inline-block;
     margin-right: 2px;
-/*    clip-path: circle(0px at top right);*/
+    clip-path: circle(100%);
+    transition: all ease-in-out 1500ms;
+
 }
 
 .p0class{
-    background: red;
+    clip-path: circle(10%);
 }
 
 @media(min-width: 400px){
