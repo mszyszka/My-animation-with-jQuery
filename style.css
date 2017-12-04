@@ -34,13 +34,15 @@ header p {
     display: inline-block;
     margin-right: 2px;
     clip-path: circle(100%);
-    transition: all ease-in-out 1500ms;
+    transition: clip-path ease-in-out 1500ms;
 
 }
 
-.p0class{
+.pointClipPath{
     clip-path: circle(10%);
 }
+
+
 
 @media(min-width: 400px){
     .point {

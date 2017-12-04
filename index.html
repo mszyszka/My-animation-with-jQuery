@@ -17,40 +17,91 @@
             https://www.youtube.com/watch?v=edNqTubHUU0&t=497s -- 39 minuta
 -->
 
-<body onload="start()">
+<body>
     <div class="container">
+        
         <header>
             <h1>This is my animation made with JavaScript</h1>
             <p>Click on one of the points.</p>
         </header>
+        
         <section class="animationField"> </section>
+        
     </div>
+    
     <!--    This is the end of the HTML code-->
-    <!--    This is the end of the HTML code-->
-    <!--    This is the end of the HTML code-->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         // First lets generate 30 points
-        function start() {
+        window.onload = start();
+        
+        var timerP1 = setTimeout(point1animation(), 1000);
+
+                      
+        function start() 
+        {
             var divContent = "";
-            for (i = 0; i <= 29; i++) {
+            
+            for (i = 0; i <= 29; i++) 
+            {
                 var p = "p" + i;
                 divContent = divContent + '<div class="point" id="' + p + '"></div>';
                 if ((i + 1) % 5 == 0) divContent = divContent + '<div style="clear:both"></div>';
             }
-            document.getElementsByClassName("animationField")[0].innerHTML = divContent;
-            point0animation();
-        }
-
-        function point0animation() {
             
+            document.getElementsByClassName("animationField")[0].innerHTML = divContent;
+
+            point0animation();
+            
+            
+        }
+        
+        
+
+        function point0animation() 
+        {
             var point0 = document.getElementById("p0");
             
-            point0.onclick = function(){
-                this.classList.toggle("p0class");
-            }
+            point0.onclick = function()
+            {
+                this.classList.toggle("pointClipPath");
                 
+                
+                
+            }
         }
+        
+        
+        
+        function point1animation() 
+        {
+            var point1 = document.getElementById("p1");
+            point1.classList.toggle("pointClipPath");
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+//        function point2animation() 
+//        {
+//            var point2 = document.getElementById("p2");
+//            
+//            point2.onclick = function()
+//            {
+//                this.classList.toggle("pointClipPath");
+//            }
+//        }
+        
+
+        
+        
+        
+        
     </script>
 </body>
 
