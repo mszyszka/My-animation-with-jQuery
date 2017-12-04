@@ -36,7 +36,7 @@ header p {
     display: inline-block;
     margin-right: 2px;
     clip-path: circle(100%);
-    transition: clip-path ease-in-out 3000ms;
+    transition: clip-path ease-in-out 2500ms;
 
 }
 
