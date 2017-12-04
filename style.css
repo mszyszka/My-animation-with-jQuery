@@ -26,6 +26,8 @@ header p {
 .animationField {
     display: inline-block;
 }
+
+
 .point {
 /*    I dont ned to have width and height becouse i set up padding*/
     padding: 25px;
@@ -34,7 +36,7 @@ header p {
     display: inline-block;
     margin-right: 2px;
     clip-path: circle(100%);
-    transition: clip-path ease-in-out 1500ms;
+    transition: clip-path ease-in-out 3000ms;
 
 }
 
